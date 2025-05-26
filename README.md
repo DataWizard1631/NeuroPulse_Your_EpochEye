@@ -1,5 +1,6 @@
 # NeuroPulse
 
+> Your EpochEye
 > **Real-time telemetry for every pulse of your machine learning.**
 
 [![Status](https://img.shields.io/badge/status-building-yellow.svg)](#)
