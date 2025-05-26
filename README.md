@@ -44,6 +44,6 @@
 This project is licensed under the MIT License – see the LICENSE file for details.
 
 ## Maintainers
-Developed and maintained by Datawizard.
+Developed and maintained by [Deep Patel](https://www.linkedin.com/in/deeppateldw1611/).
 
 
