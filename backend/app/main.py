@@ -1,7 +1,6 @@
 from fastapi import FastAPI
+from .api.routes import router
 
-app = FastAPI()
+app = FastAPI(title="NeuroPulse Logging API")
 
-@app.get("/")
-def read_root():
-    return {"message": "NeuroPulse Backend"}
+app.include_router(router)
