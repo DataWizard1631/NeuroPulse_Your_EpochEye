@@ -11,6 +11,11 @@ build/
 dist/
 # Installer logs
 pip-log.txt
+# .gitignore (at root)
+venv/
+*.pyc
+*.env
+
 
 
 

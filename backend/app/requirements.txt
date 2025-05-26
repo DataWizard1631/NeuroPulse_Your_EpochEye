@@ -1,9 +1,7 @@
-# pip install -r requirements.txt
-
 fastapi
 uvicorn
 psycopg2-binary
 sqlalchemy
 pydantic
 python-dotenv
-
+requests
