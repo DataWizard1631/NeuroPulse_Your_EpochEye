@@ -1,0 +1,35 @@
+<!-- frontend/index.html -->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>NeuroPulse MVP — Dashboard</title>
+</head>
+
+<body>
+    <h1>NeuroPulse — Live (polling) Dashboard</h1>
+    <label>Project: <input id="project" value="vision/exp1" /></label>
+    <button id="start">Start</button>
+    <pre id="out"></pre>
+
+
+    <script>
+        let timer = null;
+        document.getElementById('start').onclick = () => {
+            const proj = document.getElementById('project').value;
+            if (timer) clearInterval(timer);
+            timer = setInterval(async () => {
+                const res = await fetch(`http://localhost:3000/runs/${encodeURIComponent(proj)}/metrics`);
+                if (res.ok) {
+                    const data = await res.json();
+                    document.getElementById('out').textContent = JSON.stringify(data.slice(0, 50), null, 2);
+                } else {
+                    document.getElementById('out').textContent = 'error: ' + res.status;
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
